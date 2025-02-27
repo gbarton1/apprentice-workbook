@@ -8,5 +8,10 @@
  * @returns {boolean}
  */
 module.exports = (hour) => {
-    // Your code here
+    // if (hour < 12) {
+    //     return true;
+    // } else {
+    //     return false;
+    // }
+    return hour < 12;
 }
