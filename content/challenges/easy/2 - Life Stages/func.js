@@ -14,5 +14,15 @@
  * @returns {string}
  */
 module.exports = (age) => {
-    // Your code here
-}
+    if (age < 2) {
+        return "Baby";
+    } if (age >= 2 && age < 13) {
+        return "Kid";
+    } if (age >= 13 && age <= 19) {
+        return "Teen";
+    } if (age > 19 && age <= 30) {
+        return "Young Adult";
+    } else {
+        return "Dead";
+    }
+};
