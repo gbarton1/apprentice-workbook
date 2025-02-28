@@ -17,5 +17,4 @@
  * @returns {boolean}
  */
 module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
-    // Your code here
 };
