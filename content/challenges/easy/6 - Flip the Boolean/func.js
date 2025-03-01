@@ -5,6 +5,12 @@
  *
  * @returns {boolean|string}
  */
-module.exports = (bool) => {
-    // your code here
-};
+ module.exports = (bool) => {
+ if (bool === true) {
+    return !bool;
+ } if (bool === false) {
+    return !bool;
+ } else {
+    return "boolean expected";
+ }
+ };
