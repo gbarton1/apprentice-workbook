@@ -9,5 +9,9 @@
  * @returns {boolean}
  */
 module.exports = (word) => {
-    
+    if (word.endsWith("s")) {
+        return true;
+    } else {
+        return false;
+    }
 };
