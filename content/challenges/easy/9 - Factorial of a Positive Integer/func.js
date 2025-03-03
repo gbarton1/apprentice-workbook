@@ -12,5 +12,16 @@
  * @returns {number}
  */
 module.exports = (num) => {
-   // Your code goes here
+   if (num < 0) {
+      throw new Error("No Negatives");
+   } else if (num === 0) {
+      return 1;
+   } else { 
+   let factorial = 1;
+   while (num > 0) {
+      factorial *= num;
+      num--;
+      }
+      return factorial;
+   }
 };
