@@ -8,5 +8,9 @@
  * @returns {number} sum of all numbers from 1 to num
  */
 module.exports = (num) => {
-
+let sum = 0;
+for (let i = 0; i <= num; i++) {
+    sum += i;
+}
+return sum;
 };
