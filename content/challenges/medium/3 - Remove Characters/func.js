@@ -8,5 +8,11 @@
  * @returns {string}
  */
 module.exports = (str) => {
-    // your code here
+    let newStr = "";
+    for (let i = 0; i < str.length; i++) {
+        if (/\w|[\s._-]/.test(str[i])) {
+            newStr += str[i];
+        }
+    }
+    return newStr;
 }
