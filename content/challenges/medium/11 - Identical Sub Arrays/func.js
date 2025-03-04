@@ -10,5 +10,24 @@
  * @returns {number} number of sub-arrays with identical elements
  */
 module.exports = (arr) => {
-    // Your code here
+    let numSameArr = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length === 0) {
+            numSameArr += 1;
+            continue;
+        }
+        let firstElement = arr[i][0];
+        let allSame = true;
+
+        for (let j = 1; j < arr[i].length; j++) {
+            if (arr[i][j] !== firstElement) {
+                allSame = false;
+                }
+            }
+
+    if (allSame) {
+        numSameArr += 1;
+        }
+    }
+    return numSameArr;
 }
