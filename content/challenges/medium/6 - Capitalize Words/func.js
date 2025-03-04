@@ -10,5 +10,15 @@
  * @returns {string}
  */
 module.exports = (str) => {
-    // Your code here
+    let newString = '';
+    for (let i = 0; i < str.length; i++) {
+      if (i === 0)  {
+        newString += str[i].toUpperCase();
+    } else if (str[i - 1] === ' ') {
+            newString += str[i].toUpperCase();
+        } else {
+            newString += str[i];
+        }
+    }
+    return newString;
 }
