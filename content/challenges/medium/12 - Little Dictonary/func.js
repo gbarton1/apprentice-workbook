@@ -12,5 +12,20 @@
  * @param {Array} words 
  */
 module.exports = (initial, words) => {
-    // your code here
+    let filteredArr = [];
+
+    for (let i = 0; i < words.length; i++) {
+        let match = true;
+
+    for (let k = 0; k < initial.length; k++) {
+        if (k >= words[i].length || initial[k] !== words[i][k]) {
+           match = false;
+           break;
+            }
+        }
+        if (match) {
+        filteredArr[filteredArr.length] = words[i];
+         }
+    }
+    return filteredArr;
 }
