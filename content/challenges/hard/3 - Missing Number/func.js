@@ -10,5 +10,15 @@
  * @returns {Number} the missing number
  */
 module.exports = (arr) => {
-    // Your code here
+   // take all numbers of the array and sum
+   let missingNum = 0;
+   let sum = 0;
+   for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+// then find the expectedSum using the formula for missing numbers
+    let n = arr.length +1;
+    let expectedSum = (n * (n + 1) / 2);
+    missingNum = expectedSum - sum; // subtract sum from expected sum this equals missing number
+   return missingNum;
 }
