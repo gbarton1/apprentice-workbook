@@ -9,9 +9,9 @@
  */
 module.exports = (word) => {
     for (let i = 0; i < word.length - 1; i++) {
-            if (word[i].toLowerCase() === word[i + 1].toLowerCase()) {
-                return true;
-            }
+        if (word[i].toLowerCase() === word[i + 1].toLowerCase()) {
+            return true;
         }
-        return false;
-    };
+    }
+    return false;
+};

@@ -14,30 +14,30 @@ module.exports = (str) => {
     let result = '';
     let currentWord = '';
 
-for (let i = 0; i < str.length; i++) {
-    if (str[i] !== ' ') {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== ' ') {
         currentWord += str[i];
-    } else {
-        if (currentWord.length >= 5) {
-            let flippedWord = '';
-            for (let k = currentWord.length - 1; k >= 0; k--) {
-                flippedWord += currentWord[k];
-            }
-            result += flippedWord + ' ';
         } else {
+            if (currentWord.length >= 5) {
+                let flippedWord = '';
+                for (let k = currentWord.length - 1; k >= 0; k--) {
+                    flippedWord += currentWord[k];
+                }
+                result += flippedWord + ' ';
+            } else {
             result += currentWord + ' ';
-        }
+            }
         currentWord = '';
-}
-}
-if (currentWord.length >= 5) {
-    let flippedWord = '';
-    for (let k = currentWord.length - 1; k >= 0; k--) {
-        flippedWord += currentWord[k];
+        }
     }
-    result += flippedWord;
-} else {
-    result += currentWord;
-}
-return result;
+    if (currentWord.length >= 5) {
+        let flippedWord = '';
+        for (let k = currentWord.length - 1; k >= 0; k--) {
+            flippedWord += currentWord[k];
+        }
+        result += flippedWord;
+    } else {
+        result += currentWord;
+    }
+    return result;
 }

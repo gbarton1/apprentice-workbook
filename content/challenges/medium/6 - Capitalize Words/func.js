@@ -12,9 +12,9 @@
 module.exports = (str) => {
     let newString = '';
     for (let i = 0; i < str.length; i++) {
-      if (i === 0)  {
+        if (i === 0)  {
         newString += str[i].toUpperCase();
-    } else if (str[i - 1] === ' ') {
+        } else if (str[i - 1] === ' ') {
             newString += str[i].toUpperCase();
         } else {
             newString += str[i];

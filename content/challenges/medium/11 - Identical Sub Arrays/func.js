@@ -24,8 +24,7 @@ module.exports = (arr) => {
                 allSame = false;
                 }
             }
-
-    if (allSame) {
+        if (allSame) {
         numSameArr += 1;
         }
     }
