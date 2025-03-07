@@ -20,5 +20,5 @@ module.exports = (arr) => {
     let n = arr.length +1;
     let expectedSum = (n * (n + 1) / 2);
     missingNum = expectedSum - sum; // subtract sum from expected sum this equals missing number
-   return missingNum;
+    return missingNum;
 }
