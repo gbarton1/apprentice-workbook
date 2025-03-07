@@ -6,9 +6,7 @@
  * @returns {boolean|string}
  */
  module.exports = (bool) => {
- if (bool === true) {
-    return !bool;
- } if (bool === false) {
+ if (typeof bool === "boolean") {
     return !bool;
  } else {
     return "boolean expected";

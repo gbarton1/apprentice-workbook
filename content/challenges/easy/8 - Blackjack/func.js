@@ -17,7 +17,7 @@
 module.exports = (cards) => {
     let total = 0;
     let acesCount = 0
-  for (let i = 0; i < cards.length; i++) {
+    for (let i = 0; i < cards.length; i++) {
      if (typeof cards[i] === "string") {
         if (cards[i] === "A") {
             acesCount++;
@@ -25,21 +25,19 @@ module.exports = (cards) => {
             
             } else {
             total += 10;
-         }
-        } else {
+            }
+      } else {
         total += cards[i];
-        }
+      }
     }
-while (total > 21 && acesCount > 0) {
+    while (total > 21 && acesCount > 0) {
     total -= 10;
     acesCount--;
     }
 
-  if (total === 21) {
-    return "Blackjack!";
-    } else if (total > 21) {
-    return true
+    if (total === 21) {
+      return "Blackjack!";
     } else {
-    return false 
+      return total > 21
     }
   };

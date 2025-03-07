@@ -17,7 +17,7 @@ module.exports = (num) => {
         return "Hello";
     } if (num % 5 === 0) {
         return "Tensure";
-    } else if ((num % 3) + (num % 5) !== 0) {
+    } else {
         return "Goodbye Tensure";
     }
 };
