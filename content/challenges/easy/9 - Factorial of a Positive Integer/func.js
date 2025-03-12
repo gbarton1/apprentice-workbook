@@ -19,8 +19,8 @@ module.exports = (num) => {
    } else { 
       let factorial = 1;
       while (num > 0) {
-      factorial *= num;
-      num--;
+         factorial *= num;
+         num--;
       }
       return factorial;
    }
