@@ -15,6 +15,7 @@ module.exports = (n) => {
     let prevNum1 = 1
     let prevNum2 = 1;
     let current = 0;
+
     if (n <= 1){
         return n;
     } if (n == 2) {
@@ -24,5 +25,6 @@ module.exports = (n) => {
         prevNum1 = prevNum2;
         prevNum2 = current;
     }
+
     return current;
 }

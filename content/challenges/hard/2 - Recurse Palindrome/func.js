@@ -14,6 +14,7 @@ module.exports = (str) => {
     if (str.length <= 1) {
       return true;
     }
+
     if (str[0] !== str[str.length -1]) {
       return false;
     } else {
@@ -21,5 +22,6 @@ module.exports = (str) => {
       return reversePalindrome(newString);
     }
   }
+
   return reversePalindrome(str);
 }
