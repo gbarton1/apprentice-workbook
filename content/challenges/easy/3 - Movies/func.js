@@ -18,6 +18,7 @@
  */
 module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
    let saleAllowed = true;
+
    if (customerMoney < 8) {
     saleAllowed = false;
    } if (isMovieFull === true) {
@@ -25,5 +26,6 @@ module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
    } if ((rating === "PG" || rating === "R") && (!isParentWith && age < 17)) {
     saleAllowed = false;
    }
+
    return saleAllowed;
 };
