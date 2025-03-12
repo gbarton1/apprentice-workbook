@@ -12,13 +12,27 @@
  * @returns {boolean}
  */
 module.exports = (str) => {
-    str = str.toLowerCase();
-    for (let i = 0; i < str.length; i++) {
-        for (let j = i + 1; j < str.length; j++) {
-            if (str[i] === str[j]) {
+    // str = str.toLowerCase();
+    // for (let i = 0; i < str.length; i++) {
+    //     for (let j = i + 1; j < str.length; j++) {
+    //         if (str[i] === str[j]) {
+    //             return false;
+    //         }
+    //     }
+    // }
+    // return true;
+
+    // As i was checking for styling errors i realized this was a mutating function. so i changed it below
+
+    const newStr = str.toLowerCase();
+
+    for (let i = 0; i < newStr.length; i++) {
+        for (let j = i + 1; j < newStr.length; j++) {
+            if (newStr[i] === newStr[j]) {
                 return false;
             }
         }
     }
+
     return true;
 }

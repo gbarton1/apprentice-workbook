@@ -22,6 +22,7 @@ module.exports = (arr, n) => {
     // return newArr;
     // using push method so I changed it below
     let newArr = [];
+
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0 ) {
             newArr[newArr.length] = (arr[i] - (2 * n));
@@ -29,5 +30,6 @@ module.exports = (arr, n) => {
             newArr[newArr.length] = (arr[i] + (2 * n));
          }
     }
+
     return newArr;
 }

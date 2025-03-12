@@ -10,10 +10,12 @@
  */
 module.exports = (word) => {
     let newString = '';
+
     for (let i = 0; i < word.length; i++) {
         if (word[i] !== word[i + 1]) {
             newString += word[i];
         }
     }
+
     return newString;
 }

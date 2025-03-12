@@ -16,7 +16,7 @@ module.exports = (str) => {
 
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== ' ') {
-        currentWord += str[i];
+            currentWord += str[i];
         } else {
             if (currentWord.length >= 5) {
                 let flippedWord = '';
@@ -25,11 +25,13 @@ module.exports = (str) => {
                 }
                 result += flippedWord + ' ';
             } else {
-            result += currentWord + ' ';
+                result += currentWord + ' ';
             }
-        currentWord = '';
+
+            currentWord = '';
         }
     }
+
     if (currentWord.length >= 5) {
         let flippedWord = '';
         for (let k = currentWord.length - 1; k >= 0; k--) {
@@ -39,5 +41,6 @@ module.exports = (str) => {
     } else {
         result += currentWord;
     }
+
     return result;
 }

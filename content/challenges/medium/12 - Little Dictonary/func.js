@@ -14,6 +14,7 @@
 module.exports = (initial, words) => {
     let filteredArr = [];
     let match = true;
+
     for (let i = 0; i < words.length; i++) {
         for (let k = 0; k < initial.length; k++) {
             if (k >= words[i].length || initial[k] !== words[i][k]) {
@@ -25,5 +26,6 @@ module.exports = (initial, words) => {
             filteredArr[filteredArr.length] = words[i];
         }
     }
+
     return filteredArr;
 }
