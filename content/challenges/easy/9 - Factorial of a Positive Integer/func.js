@@ -13,7 +13,7 @@
  */
 module.exports = (num) => {
    if (num < 0) {
-      throw new Error("No Negatives");
+      throw new Error("Cannot Pass in a Negative Number");
    } else if (num === 0) {
       return 1;
    } else { 
