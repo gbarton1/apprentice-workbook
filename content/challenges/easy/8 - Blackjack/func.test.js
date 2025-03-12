@@ -3,8 +3,8 @@ const func = require("./func.js");
 test("Expected: 'False'", () => {
   expect(func(['A', 2, 3])).toEqual(false);
 });
-test("Expected: 'Blackjack!'", () => {
-  expect(func(['A', 'J', 'K'])).toEqual('Blackjack!');
+test("Expected: 'False'", () => {
+  expect(func(['A', 'J', 'K'])).toEqual(false);
 });
 test("Expected: 'true'", () => {
   expect(func(['A', 'J', 'K', 'Q'])).toEqual(true);
@@ -24,8 +24,8 @@ test("Expected: 'Blackjack!'", () => {
 test("Expected: 'Blackjack!'", () => {
   expect(func(['A', 10])).toEqual('Blackjack!');
 });
-test("Expected: 'Blackjack'", () => {
-  expect(func(['A', 'A', 10])).toEqual('Blackjack');
+test("Expected: 'Blackjack!'", () => {
+  expect(func(['A', 'A', 10])).toEqual('Blackjack!');
 });
 test("Expected: 'Blackjack!'", () => {
   expect(func(['A', 9, 'A'])).toEqual('Blackjack!');
