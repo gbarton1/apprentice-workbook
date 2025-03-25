@@ -12,16 +12,27 @@
  * @returns {number}
  */
 module.exports = (num) => {
-   if (num < 0) {
-      throw new Error("Cannot Pass in a Negative Number");
-   } else if (num === 0) {
-      return 1;
-   } else { 
-      let factorial = 1;
-      while (num > 0) {
-         factorial *= num;
-         num--;
+   // if (num < 0) {
+   //    throw new Error("Cannot Pass in a Negative Number");
+   // } else if (num === 0) {
+   //    return 1;
+   // } else {
+   //    let factorial = 1;
+   //    while (num > 0) {
+   //       factorial *= num;
+   //       num--;
+   //    }
+   //    return factorial;
+   // }
+
+   function factorial(num){
+      if (num < 0) {
+         throw new Error("Cannot Pass in a Negative Number");
+      } else if (num === 0) {
+         return 1;
+      } else {
+         return num * factorial(num - 1);
       }
-      return factorial;
    }
+   return factorial(num);
 };

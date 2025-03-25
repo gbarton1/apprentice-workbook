@@ -12,9 +12,5 @@
  * @returns {boolean}
  */
 module.exports = (probabilityOfWinning, prize, costOfPlaying) => {
-    if (probabilityOfWinning * prize - costOfPlaying > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return probabilityOfWinning * prize - costOfPlaying > 0;
 };
