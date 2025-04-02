@@ -13,13 +13,12 @@ module.exports = (str) => {
         return true;
     }
 
-    for (let i = 0; i < str.length; i++) {
-        for (let k = str.length - 1; k >= 0; k--) {
-            if (str[i] === str[k]) {
-                return true;
-            } else {
-                return false;
-            }
+    let len = str.length
+
+    for (let i = 0; i < len / 2; i++) {
+        if (str[i] !== str[len - 1 - i]) {
+            return false;
         }
     }
+    return true;
 }

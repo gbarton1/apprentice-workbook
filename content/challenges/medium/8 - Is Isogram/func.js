@@ -24,14 +24,25 @@ module.exports = (str) => {
 
     // As i was checking for styling errors i realized this was a mutating function. so i changed it below
 
-    const newStr = str.toLowerCase();
+    // const newStr = str.toLowerCase();
 
-    for (let i = 0; i < newStr.length; i++) {
-        for (let j = i + 1; j < newStr.length; j++) {
-            if (newStr[i] === newStr[j]) {
-                return false;
-            }
+    // for (let i = 0; i < newStr.length; i++) {
+    //     for (let j = i + 1; j < newStr.length; j++) {
+    //         if (newStr[i] === newStr[j]) {
+    //             return false;
+    //         }
+    //     }
+    // }
+
+    // return true;
+    const newStr = str.toLowerCase();
+    const CharacterSet = new Set();
+
+    for (let char of newStr) {
+        if (CharacterSet.has(char)) {
+            return false;
         }
+        CharacterSet.add(char);
     }
 
     return true;

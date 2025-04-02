@@ -13,16 +13,15 @@ module.exports = (arr) => {
     let numSameArr = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length === 0) {
+        if (arr[i].length === 0 || arr[i].length === 1) {
             numSameArr += 1;
             continue;
         }
 
-        let firstElement = arr[i][0];
         let allSame = true;
 
         for (let j = 1; j < arr[i].length; j++) {
-            if (arr[i][j] !== firstElement) {
+            if (arr[i][j] !== arr[i][0]) {
                 allSame = false;
             }
         }

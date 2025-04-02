@@ -26,7 +26,7 @@ module.exports = (arr, n) => {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] % 2 === 0 ) {
             newArr[newArr.length] = (arr[i] - (2 * n));
-        } else if (arr[i] % 2 !== 0) {
+        } else {
             newArr[newArr.length] = (arr[i] + (2 * n));
          }
     }
