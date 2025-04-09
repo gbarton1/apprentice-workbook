@@ -13,7 +13,7 @@ module.exports = (arr) => {
     let numSameArr = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length === 0 || arr[i].length === 1) {
+        if (arr[i].length <= 1) {
             numSameArr += 1;
             continue;
         }
