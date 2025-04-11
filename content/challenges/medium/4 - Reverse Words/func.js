@@ -11,5 +11,54 @@
  * @returns {string} The string with the proper words reversed
  */
 module.exports = (str) => {
-    // your code here
+//     let result = '';
+//     let currentWord = '';
+
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] !== ' ') {
+//             currentWord += str[i];
+//         } else {
+//             if (currentWord.length >= 5) {
+//                 let flippedWord = '';
+//                 for (let k = currentWord.length - 1; k >= 0; k--) {
+//                     flippedWord += currentWord[k];
+//                 }
+//                 result += flippedWord + ' ';
+//             } else {
+//                 result += currentWord + ' ';
+//             }
+
+//             currentWord = '';
+//         }
+//     }
+
+//     if (currentWord.length >= 5) {
+//         let flippedWord = '';
+//         for (let k = currentWord.length - 1; k >= 0; k--) {
+//             flippedWord += currentWord[k];
+//         }
+//         result += flippedWord;
+//     } else {
+//         result += currentWord;
+//     }
+
+//     return result;
+
+    let splitString = str.split(' ');
+    let result = '';
+
+    for (let i = 0; i < splitString.length; i++) {
+        let word = splitString[i];
+            if (word.length >= 5) {
+                let flippedWord = '';
+                for (let j = word.length - 1; j >= 0; j--) {
+                    flippedWord += word[j];
+                }
+                result += flippedWord;
+            } else {
+                result += word;
+            }
+            result += ' ';
+    }
+    return result.trim();
 }

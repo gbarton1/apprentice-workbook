@@ -11,5 +11,11 @@
  * @returns {number} GCD
  */
 module.exports = (int1, int2) => {
-    // your code here
+    let  commonDividingNumber = int1 + int2;
+
+    while ((int1 % commonDividingNumber !== 0) || (int2 % commonDividingNumber !== 0)) {
+        commonDividingNumber--;
+    }
+
+    return commonDividingNumber;
 }

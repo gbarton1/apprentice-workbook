@@ -10,5 +10,26 @@
  * @param {number} n 
  */
 module.exports = (arr, n) => {
-    // your code here
+    // let newArr = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i] % 2 === 0 ) {
+    //             newArr.push((arr[i] - (2 * n)));
+    //         } else if (arr[i] % 2 !== 0) {
+    //             newArr.push((arr[i] + (2 * n)));
+    //         }
+    //     }
+
+    // return newArr;
+    // using push method so I changed it below
+    let newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0 ) {
+            newArr[newArr.length] = (arr[i] - (2 * n));
+        } else {
+            newArr[newArr.length] = (arr[i] + (2 * n));
+         }
+    }
+
+    return newArr;
 }

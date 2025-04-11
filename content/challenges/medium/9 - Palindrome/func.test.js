@@ -15,3 +15,6 @@ test('Expect false, 2 different characters is never palindrome', () => {
 test('Expect true, is palindrome', () => {
     expect(func("abba")).toEqual(true);
 });
+test('Expect false, is not palindrome', () => {
+    expect(func("abaa")).toEqual(false);
+});
