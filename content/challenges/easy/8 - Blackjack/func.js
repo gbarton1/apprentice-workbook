@@ -15,5 +15,30 @@
  * @returns {boolean | string} true if sum exceeds 21, false if sum is under or equal to 21, 'Blackjack!' if sum is exactly 21
  */
 module.exports = (cards) => {
-    // Your code here
+  let total = 0;
+  let acesCount = 0;
+
+  for (let i = 0; i < cards.length; i++) {
+    if (typeof cards[i] === "string") {
+      if (cards[i] === "A") {
+        acesCount++;
+        total += 11; 
+      } else {
+        total += 10;
+      }
+    } else {
+      total += cards[i];
+    }
+  }
+
+  while (total > 21 && acesCount > 0) {
+    total -= 10;
+    acesCount--;
+  }
+
+  if (total === 21) {
+    return "Blackjack!";
+  } else {
+    return total > 21
+  }
 };

@@ -17,5 +17,15 @@
  * @returns {boolean}
  */
 module.exports = (customerMoney, isMovieFull, rating, age, isParentWith) => {
-    // Your code here
+   let saleAllowed = true;
+
+   if (customerMoney < 8) {
+    saleAllowed = false;
+   } if (isMovieFull === true) {
+    saleAllowed = false;
+   } if ((rating === "PG" || rating === "R") && (!isParentWith && age < 17)) {
+    saleAllowed = false;
+   }
+
+   return saleAllowed;
 };

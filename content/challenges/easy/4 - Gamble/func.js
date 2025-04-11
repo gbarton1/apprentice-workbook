@@ -12,5 +12,5 @@
  * @returns {boolean}
  */
 module.exports = (probabilityOfWinning, prize, costOfPlaying) => {
-    // your code here
+    return probabilityOfWinning * prize - costOfPlaying > 0;
 };
