@@ -10,5 +10,18 @@
  * @returns {boolean} true if the string is a palindrome, false otherwise
  */
 module.exports = (str) => {
-  // your code here
+  const reversePalindrome = (str) => {
+    if (str.length <= 1) {
+      return true;
+    }
+
+    if (str[0] !== str[str.length -1]) {
+      return false;
+    } else {
+      let newString = str.slice(1, -1);
+      return reversePalindrome(newString);
+    }
+  }
+
+  return reversePalindrome(str);
 }

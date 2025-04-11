@@ -12,5 +12,19 @@
  * @returns {number} nth Fibonacci number
  */
 module.exports = (n) => {
-    // Your code here
+    let prevNum1 = 1
+    let prevNum2 = 1;
+    let current = 0;
+
+    if (n <= 1){
+        return n;
+    } if (n == 2) {
+        return 1;
+    } for (let i = 3; i <= n; i++) {
+        current = prevNum1 + prevNum2;
+        prevNum1 = prevNum2;
+        prevNum2 = current;
+    }
+
+    return current;
 }
